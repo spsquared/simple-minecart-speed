@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.example.mixin.client",
+	"package": "sp2minecartspeed.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"client": [
-		"ExampleClientMixin"
+	"mixins": [
+		"AbstractMinecartEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
