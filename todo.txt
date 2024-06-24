@@ -1,0 +1,5 @@
+make minecart sliding friction lower on blocks mineable by pickaxe/axe
+make minecarts retain their momentum better (aka even less friction)
+add item to rail crafting recipe to modify rail type (show as track fills?)
+make the rails 3d why not
+remember to delete extra faces from model
