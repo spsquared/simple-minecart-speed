@@ -9,3 +9,5 @@ A very simple mod that adds a way to make minecarts not useless for transportati
 TODO:
 * Preserve vertical velocity when leaving rails
 * Add "trimmed" rails crafted using normal rails and some block to change the max speed (texture will likely have a thin strip of color like powered/activator rails)
+* Moving chest/furnace/hopper minecarts or minecarts with passengers forceload chunks
+* Make detector and activator rails work at high speeds

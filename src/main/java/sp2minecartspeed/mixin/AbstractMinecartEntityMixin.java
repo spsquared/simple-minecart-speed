@@ -13,6 +13,7 @@ import net.minecraft.entity.MovementType;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.entity.vehicle.VehicleEntity;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 @Mixin(AbstractMinecartEntity.class)
@@ -22,12 +23,10 @@ public abstract class AbstractMinecartEntityMixin extends VehicleEntity {
 		super(type, world);
 	}
 	
-	@Shadow
-	protected abstract double getMaxSpeed();
 	
 	@Inject(at = @At("HEAD"), method = "getMaxSpeed", cancellable = true)
 	private void getMaxSpeedOverride(CallbackInfoReturnable<Double> ci) {
-		ci.setReturnValue(128.0 / 20.0);
+		ci.setReturnValue(32.0 / 20.0);
 		ci.cancel();
 	}
 	
@@ -54,6 +53,9 @@ public abstract class AbstractMinecartEntityMixin extends VehicleEntity {
 			}
 		} else {
 			this.setVelocity(this.getVelocity().multiply(0.99));
+		}
+		if (this.getVelocity().length() < 0.01) {
+			this.setVelocity(Vec3d.ZERO);
 		}
 		ci.cancel();
 	}
