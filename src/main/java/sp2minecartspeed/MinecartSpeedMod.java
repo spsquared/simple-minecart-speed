@@ -10,9 +10,6 @@ public class MinecartSpeedMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-//		Register new rails (normal rails but with added color trim to the iron)
-//		Crafting is 4x normal rail + block -> 4x raillll
-//		Make minecarts not slow once off rails
 //		
 	}
 }
